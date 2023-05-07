@@ -17,12 +17,27 @@ const renderGrid = (gridSize, gridDimension) => {
     gridContainer.appendChild(grid);
   }
 
+  // CLICKS
   const grids = document.querySelectorAll(".grid");
   grids.forEach((grid) => {
     grid.addEventListener("click", () => {
       console.log("touched");
       grid.style.backgroundColor = gridColor;
     });
+  });
+
+  // DRAGS
+  let isDragging = false;
+  gridContainer.addEventListener("mousedown", () => {
+    isDragging = true;
+  });
+  gridContainer.addEventListener("mousemove", (event) => {
+    if (isDragging) {
+      event.target.style.backgroundColor = gridColor;
+    }
+  });
+  gridContainer.addEventListener("mouseup", () => {
+    isDragging = false;
   });
 };
 renderGrid(gridSize, gridDimension);
@@ -52,7 +67,9 @@ eraser.addEventListener("click", () => {
     gridColor = "#ffffff";
   } else {
     gridColor = activeColor;
+    console.log(activeColor);
   }
+  colorInput.value = gridColor; // update the colorInput value
 });
 
 setInterval(function () {
