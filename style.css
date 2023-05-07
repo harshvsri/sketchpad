@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+body {
+  margin: 4rem;
+  font-family: "Bangers", cursive;
+  /* background-color: blanchedalmond; */
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+
+.heading {
+  margin: 0;
+  font-size: 100px;
+}
+
+/** INPUT */
+.input {
+  font-size: 32px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.eraser-active {
+  text-decoration: 5px solid underline;
+}
+
+/** GRID */
+.grid-container {
+  height: 640px;
+  width: 640px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid {
+  box-sizing: border-box;
+  border: 1px solid black;
+}
