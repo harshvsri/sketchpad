@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🖌️SKETCHPAD🎨</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body id="gradient">
+    <div class="content-container">
+      <div class="heading">SKETCHPAD</div>
+      <div class="input-container">
+        <div class="input">
+          <label for="grid">Grid Size</label>
+          <input
+            type="range"
+            name="grid-size"
+            id="gridSize"
+            min="8"
+            max="64"
+            step="8"
+            value="16"
+          />
+          <span id="selectedValue">16</span>
+        </div>
+        <div class="input">
+          <label for="color">Color</label>
+          <input type="color" id="color" placeholder="color" />
+        </div>
+        <div class="input">
+          <label for="eraser" id="eraser">Eraser</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-container"></div>
+  </body>
+</html>

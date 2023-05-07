@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+body {
+  margin: 4rem;
+  font-family: "Bangers", cursive;
+  /* background-color: blanchedalmond; */
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+
+#gradient {
+  background-color: #7d7dea;
+  animation: flow 10s ease-in-out infinite;
+}
+@keyframes flow {
+  0% {
+    background-color: #7d7dea;
+  }
+  50% {
+    background-color: #0f7d7d;
+  }
+  100% {
+    background-color: #7d0f7d;
+  }
+}
+
+.heading {
+  margin: 0;
+  font-size: 100px;
+}
+
+/** INPUT */
+.input {
+  font-size: 32px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.eraser-active {
+  text-decoration: 5px solid underline;
+}
+
+/** GRID */
+.grid-container {
+  background-color: white;
+  height: 640px;
+  width: 640px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid {
+  box-sizing: border-box;
+  border: 1px solid black;
+}
