@@ -16,6 +16,14 @@ const renderGrid = (gridSize, gridDimension) => {
 
     gridContainer.appendChild(grid);
   }
+
+  const grids = document.querySelectorAll(".grid");
+  grids.forEach((grid) => {
+    grid.addEventListener("click", () => {
+      console.log("touched");
+      grid.style.backgroundColor = gridColor;
+    });
+  });
 };
 renderGrid(gridSize, gridDimension);
 
@@ -45,14 +53,6 @@ eraser.addEventListener("click", () => {
   } else {
     gridColor = activeColor;
   }
-});
-
-const grids = document.querySelectorAll(".grid");
-grids.forEach((grid) => {
-  grid.addEventListener("click", () => {
-    console.log("touched");
-    grid.style.backgroundColor = gridColor;
-  });
 });
 
 setInterval(function () {
