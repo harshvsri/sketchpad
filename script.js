@@ -54,3 +54,9 @@ grids.forEach((grid) => {
     grid.style.backgroundColor = gridColor;
   });
 });
+
+setInterval(function () {
+  var colors = ["#0f0f7d", "#0f7d7d", "#7d0f7d"];
+  var randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.backgroundColor = randomColor;
+}, 5000); // change color every 5 seconds
